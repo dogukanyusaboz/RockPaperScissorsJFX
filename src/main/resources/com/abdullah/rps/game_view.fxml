@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.abdullah.rps.GameController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label fx:id="playerChoiceLabel" text="Senin Seçimin:"/>
+    <Label fx:id="computerChoiceLabel" text="Bilgisayarın Seçimi:"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="rockButton" text="Taş" onAction="#handleRock"/>
+        <Button fx:id="paperButton" text="Kağıt" onAction="#handlePaper"/>
+        <Button fx:id="scissorsButton" text="Makas" onAction="#handleScissors"/>
+    </HBox>
+    <HBox spacing="20" alignment="CENTER">
+        <ImageView fx:id="playerImageView" fitWidth="80" fitHeight="80"/>
+        <ImageView fx:id="computerImageView" fitWidth="80" fitHeight="80"/>
+    </HBox>
+    <Label fx:id="resultLabel" text="Sonuç:"/>
+    <Label fx:id="scoreLabel" text="Skor: 0 - 0"/>
+    <Label fx:id="roundLabel" text="Round: 0"/>
+    <Label fx:id="infoLabel"/>
+    <Button fx:id="resetButton" text="Yeniden Başla" visible="false" onAction="#handleReset"/>
+</VBox>
